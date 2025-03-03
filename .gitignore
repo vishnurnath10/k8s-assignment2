@@ -1,0 +1,9 @@
+# AWS credentials
+*.pem
+*.key
+.aws/
+credentials
+
+# Terraform files
+.terraform/
+terraform.tfstate*
