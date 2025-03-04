@@ -30,7 +30,7 @@ jobs:
         ECR_REPOSITORY: clo835assignment2  
         IMAGE_TAG: mysql-v1.0
       run: |
-        docker build -f assignment1/Dockerfile_mysql -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+        docker build -f assignment1/Dockerfile_mysql -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG assignment1/
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
 
     - name: Build and push Flask app image
@@ -39,5 +39,5 @@ jobs:
         ECR_REPOSITORY: clo835assignment2  
         IMAGE_TAG: flask-v2.0
       run: |
-        docker build -f assignment1/Dockerfile -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+        docker build -f assignment1/Dockerfile -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG assignment1/
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
