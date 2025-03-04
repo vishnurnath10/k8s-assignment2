@@ -1,6 +1,6 @@
 FROM ubuntu:20.04
 RUN apt-get update -y
-COPY . /assignment1/app
+COPY . /app
 WORKDIR /app
 RUN set -xe \
     && apt-get update -y \
