@@ -7,3 +7,8 @@ credentials
 # Terraform files
 .terraform/
 terraform.tfstate*
+
+terraform/clo835-keypair
+
+
+terraform/clo835-keypair.pub
