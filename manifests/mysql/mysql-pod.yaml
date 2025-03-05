@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mysql-pod
+  namespace: default
+  labels:
+    app: mysql
+spec:
+  imagePullSecrets:
+  - name: ecr-secret
+  containers:
+  - name: mysql
+    image: 661484852155.dkr.ecr.us-east-1.amazonaws.com/clo835assignment2:mysql-v1.0
+    ports:
+    - containerPort: 3306
+    env:
+    - name: MYSQL_ROOT_PASSWORD
+      value: "db_pass123"
+    - name: MYSQL_DATABASE
+      value: "employees"
+
