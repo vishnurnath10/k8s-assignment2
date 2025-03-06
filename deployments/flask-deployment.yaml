@@ -3,16 +3,16 @@ kind: Deployment
 metadata:
   name: flask-deployment
   labels:
-    app: flask
+    app: employees  
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: flask
+      app: employees  
   template:
     metadata:
       labels:
-        app: flask
+        app: employees  
     spec:
       containers:
       - name: flask
