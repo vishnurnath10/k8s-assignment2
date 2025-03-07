@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: flask
-        image: 661484852155.dkr.ecr.us-east-1.amazonaws.com/clo835assignment2:flask-v2.0
+        image: 661484852155.dkr.ecr.us-east-1.amazonaws.com/clo835assignment2:flask-v1.0
         ports:
         - containerPort: 8080
         env:
