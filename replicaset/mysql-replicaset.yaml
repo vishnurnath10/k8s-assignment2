@@ -15,6 +15,8 @@ spec:
       labels:
         app: mysql
     spec:
+      imagePullSecrets:  
+      - name: ecr-secret  
       containers:
       - name: mysql
         image: 661484852155.dkr.ecr.us-east-1.amazonaws.com/clo835assignment2:mysql-v1.0

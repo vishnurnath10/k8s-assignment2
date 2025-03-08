@@ -4,7 +4,7 @@ metadata:
   name: flask-replicaset
   namespace: flask
 spec:
-  replicas: 3  
+  replicas: 3
   selector:
     matchLabels:
       app: employees
@@ -13,6 +13,8 @@ spec:
       labels:
         app: employees
     spec:
+      imagePullSecrets:
+      - name: ecr-secret
       containers:
       - name: flask
         image: 661484852155.dkr.ecr.us-east-1.amazonaws.com/clo835assignment2:flask-v1.0
@@ -20,7 +22,7 @@ spec:
         - containerPort: 8080
         env:
         - name: DBHOST
-          value: "mysql-service"
+          value: "mysql-service.sql.svc.cluster.local"
         - name: DBPORT
           value: "3306"
         - name: DBUSER
