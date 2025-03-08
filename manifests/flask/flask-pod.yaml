@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: flask-pod
-  namespace: default
+  namespace: flask
   labels:
     app: employees
 spec:
