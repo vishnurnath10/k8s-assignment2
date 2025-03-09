@@ -31,4 +31,6 @@ spec:
           value: "db_pass123"
         - name: DATABASE
           value: "employees"
+      imagePullSecrets:
+      - name: ecr-secret
 
