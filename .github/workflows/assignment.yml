@@ -37,7 +37,7 @@ jobs:
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         ECR_REPOSITORY: clo835assignment2  
-        IMAGE_TAG: flask-v1.0
+        IMAGE_TAG: flask-v2.0
       run: |
         docker build -f assignment1/Dockerfile -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG assignment1/
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
