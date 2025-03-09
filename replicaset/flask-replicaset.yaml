@@ -3,6 +3,8 @@ kind: ReplicaSet
 metadata:
   name: flask-replicaset
   namespace: flask
+  labels:
+    app: employees
 spec:
   replicas: 3
   selector:
